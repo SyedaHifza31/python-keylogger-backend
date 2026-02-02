@@ -22,11 +22,13 @@ with keyboard.Listener(
     listener.join()
 import os
 from flask import Flask
+import os
+
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello World"
+    return "Backend is running successfully!"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
